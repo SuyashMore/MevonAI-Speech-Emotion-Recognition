@@ -32,12 +32,7 @@
 
 * [About the Project](#about-the-project)
   * [Built With](#built-with)
-* [Getting Started](#getting-started)
-  * [Prerequisites](#prerequisites)
-  * [Installation](#installation)
-* [Usage](#usage)
 * [License](#license)
-* [Contact](#contact)
 * [Acknowledgements](#acknowledgements)
 
 
@@ -49,85 +44,70 @@
 
 The main aim of the project is to Identify the emotion of multiple speakers in a call audio as a application for customer satisfaction feedback in call centres.
 
-Here's how:
 
-## Feature Extraction
+### Built With
+
+* [Python 2.7](https://www.python.org/download/releases/2.7/) (Python3 dosen't support one of the project Dependency)
+* [Flask](https://flask.palletsprojects.com/en/1.1.x/)
+* [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
+* [Tensorflow-Keras](https://www.tensorflow.org/guide/keras/functional)
+* [librosa](https://github.com/librosa/librosa)
+
+## Here's how:
+
+#### Speaker Diarization
+* Speaker diarisation (or diarization) is the process of partitioning an input audio stream into homogeneous segments according to the speaker identity. It can enhance the readability of an automatic speech transcription  by structuring the audio stream into speaker turns and, when used together with speaker recognition systems, by providing the speaker’s true identity. It is used to answer the question "who spoke when?" Speaker diarisation is a combination of speaker segmentation and speaker clustering. The first aims at finding speaker change points in an audio stream. The second aims at grouping together speech segments on the basis of speaker characteristics.
+
+<img src="https://github.com/taylorlu/Speaker-Diarization/raw/master/resources/diarization.gif" alt="Logo">
+
+
+#### Feature Extraction
 * When we do Speech Recognition tasks, MFCCs is the state-of-the-art feature since it was invented in the 1980s.This shape determines what sound comes out. If we can determine the shape accurately, this should give us an accurate representation of the phoneme being produced. The shape of the vocal tract manifests itself in the envelope of the short time power spectrum, and the job of MFCCs is to accurately represent this envelope. 
 
 <img src="https://i.imgur.com/UANHXoU.png" alt="Logo">
-
-* Using Convolutional Neural Network to recognize emotion from the audio recording
-
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue.
-
-A list of commonly used resources that I find helpful are listed in the acknowledgements.
-
-### Built With
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-* [Python2](https://getbootstrap.com)
-* [Flask-Server](https://jquery.com)
-* [MongoDB](https://laravel.com)
+The Above Image represents the audio Waveform , the below image shows the converted MFCC Output on which we will Run our CNN Model.
 
 
+#### CNN Model Architecture
+* Use Convolutional Neural Network to recognize emotion on the MFCCs
+```python
+model_ravdess = Sequential()
+kernel = 5
+model_ravdess.add(Conv2D(32, 5,strides=2,padding='same',
+                 input_shape=(13,216,1)))
+model_ravdess.add(Activation('relu'))
+model_ravdess.add(BatchNormalization())
 
-<!-- GETTING STARTED -->
-## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+model_ravdess.add(Conv2D(64, 5,strides=2,padding='same',))
+model_ravdess.add(Activation('relu'))
+model_ravdess.add(BatchNormalization())
 
-### Prerequisites
+model_ravdess.add(Conv2D(64, 5,strides=2,padding='same',))
+model_ravdess.add(Activation('relu'))
+model_ravdess.add(BatchNormalization())
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-```sh
-npm install npm@latest -g
+model_ravdess.add(Flatten())
+
+
+model_ravdess.add(Dense(7))
+model_ravdess.add(Activation('softmax'))
+
+opt = keras.optimizers.Adam(lr=0.001, beta_1=0.9, beta_2=0.999, epsilon=None, decay=0.0, amsgrad=False)
 ```
 
-### Installation
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-```sh
-git clone https://github.com/your_username_/Project-Name.git
-```
-3. Install NPM packages
-```sh
-npm install
-```
-4. Enter your API in `config.js`
-```JS
-const API_KEY = 'ENTER YOUR API';
-```
 
 
 
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+[Download RAVDESS Emotional speech audio dataset ](https://www.kaggle.com/uwrfkaggler/ravdess-emotional-speech-audio)
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+* 2DConvolution(.py) file is used to training the model.
 
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a list of proposed features (and known issues).
-
-
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+* Server(.py) will start the web server on Default Port
 
 
 
@@ -136,30 +116,12 @@ Contributions are what make the open source community such an amazing place to b
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
-
-
-<!-- CONTACT -->
-## Contact
-
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
-
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
-
-
-
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Img Shields](https://shields.io)
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Pages](https://pages.github.com)
-* [Animate.css](https://daneden.github.io/animate.css)
-* [Loaders.css](https://connoratherton.com/loaders)
-* [Slick Carousel](https://kenwheeler.github.io/slick)
-* [Smooth Scroll](https://github.com/cferdinandi/smooth-scroll)
-* [Sticky Kit](http://leafo.net/sticky-kit)
-* [JVectorMap](http://jvectormap.com)
-* [Font Awesome](https://fontawesome.com)
+* [Speech Emotion Recognition with CNN](https://towardsdatascience.com/speech-emotion-recognition-with-convolution-neural-network-1e6bb7130ce3)
+* [MFCCs Tutorial](http://practicalcryptography.com/miscellaneous/machine-learning/guide-mel-frequency-cepstral-coefficients-mfccs/)
+* [UIS-RNN Fully Supervised Speaker Diarization](https://github.com/google/uis-rnn)
+* [uis-rnn and speaker embedding by vgg-speaker-recognition by taylorlu](https://github.com/taylorlu/Speaker-Diarization)
 
 
 
