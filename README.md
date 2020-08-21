@@ -118,6 +118,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 <!-- ACKNOWLEDGEMENTS -->
 ## Acknowledgements
+* [Speech Emotion Recognition from Saaket Agashe's Github](https://github.com/saa1605/speech-emotion-recognition)
 * [Speech Emotion Recognition with CNN](https://towardsdatascience.com/speech-emotion-recognition-with-convolution-neural-network-1e6bb7130ce3)
 * [MFCCs Tutorial](http://practicalcryptography.com/miscellaneous/machine-learning/guide-mel-frequency-cepstral-coefficients-mfccs/)
 * [UIS-RNN Fully Supervised Speaker Diarization](https://github.com/google/uis-rnn)
