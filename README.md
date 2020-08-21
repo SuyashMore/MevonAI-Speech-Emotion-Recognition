@@ -105,7 +105,7 @@ opt = keras.optimizers.Adam(lr=0.001, beta_1=0.9, beta_2=0.999, epsilon=None, de
 
 [Download RAVDESS Emotional speech audio dataset ](https://www.kaggle.com/uwrfkaggler/ravdess-emotional-speech-audio)
 
-* 2DConvolution(.py) file is used to training the model.
+* 2DConvolution(.ipynb) file is used to training the model.
 
 * Server(.py) will start the web server on Default Port
 
