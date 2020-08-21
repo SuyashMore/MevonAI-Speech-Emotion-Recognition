@@ -11,7 +11,7 @@ import toolkits
 import model as spkModel
 import os
 from viewer import PlotDiar
-import filter2 
+import filterAudio
 
 # ===========================================
 #        Parse thse argument
@@ -216,9 +216,7 @@ def main(wav_path, embedding_per_second=1.0, overlap_rate=0.5,exportFile=None,ex
         speaker_final[itr].export(write_path,format="wav")
         itr+=1
 
-    return len(speaker_final)
-
-    
+    del speaker_final
 
     # p = PlotDiar(map=speakerSlice, wav=wav_path, gui=True, size=(25, 6))
     # p.draw()
@@ -239,15 +237,15 @@ def diarization_try(parentClip,t1,t2,speakernumber):
 def diarizeAudio(inputFile,exportFile,expectedSpeakers=2):
     FILE_N = inputFile
     print("Filtering:",FILE_N)
-    filter2.filterWav(FILE_N,"filterTemp.wav")
+    filterAudio.filterWav(FILE_N,"filterTemp.wav")
     print("Filtering Complete")
-    return main("filterTemp.wav", embedding_per_second=0.6, overlap_rate=0.4,exportFile=exportFile,expectedSpeakers=expectedSpeakers)
+    main("filterTemp.wav", embedding_per_second=0.6, overlap_rate=0.4,exportFile=exportFile,expectedSpeakers=expectedSpeakers)
 
 
 if __name__ == '__main__':
     FILE_N = "m6.wav"
     print("Filtering")
-    filter2.filterWav(FILE_N,"filter_"+FILE_N)
+    filterAudio.filterWav(FILE_N,"filter_"+FILE_N)
     filtered = pdb.from_wav("filter_"+FILE_N)
     filtered.export("Amp-filter_"+FILE_N, format= "wav")
     print("Filtering Complete")
