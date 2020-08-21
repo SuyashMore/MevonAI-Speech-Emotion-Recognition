@@ -22,9 +22,15 @@
 
   <p align="center">
     Identify the emotion of multiple speakers in a Audio Segment 
+    <br />
+    <br />
+    <a href="https://colab.research.google.com/drive/1RG8Ms2M7GKro2GPJluy3UwpuOj4WCXgf?usp=sharing">View Demo</a>
+    ·
+    <a href="https://github.com/SuyashMore/MevonAI-Speech-Emotion-Recognition/issues">Report Bug</a>
+    ·
+    <a href="https://github.com/SuyashMore/MevonAI-Speech-Emotion-Recognition/issues">Request Feature</a>
   </p>
 </p>
-
 
 
 <!-- TABLE OF CONTENTS -->
@@ -32,8 +38,13 @@
 
 * [About the Project](#about-the-project)
   * [Built With](#built-with)
+* [Usage](#usage)
+* [Demo](#demo)
 * [License](#license)
 * [Acknowledgements](#acknowledgements)
+* [FAQ](#faq)
+
+
 
 
 
@@ -103,9 +114,11 @@ opt = keras.optimizers.Adam(lr=0.001, beta_1=0.9, beta_2=0.999, epsilon=None, de
 <!-- USAGE EXAMPLES -->
 ## Usage
 
-[Download RAVDESS Emotional speech audio dataset ](https://www.kaggle.com/uwrfkaggler/ravdess-emotional-speech-audio)
+* [Download RAVDESS Emotional speech audio dataset ](https://www.kaggle.com/uwrfkaggler/ravdess-emotional-speech-audio)
 
-* Install requirements using: pip3 install -r src/requirements.txt
+* Install requirements by: 
+  1. sudo chmod +x src/setup.sh
+  2. ./setup.sh
 
 * Add audio files in .wav format for analysis in input/ folder
 
@@ -119,6 +132,10 @@ opt = keras.optimizers.Adam(lr=0.001, beta_1=0.9, beta_2=0.999, epsilon=None, de
 
 * Server(.py) will start the web server on Default Port
 
+
+<!-- Demo -->
+## Demo
+* <a href="https://colab.research.google.com/drive/1RG8Ms2M7GKro2GPJluy3UwpuOj4WCXgf?usp=sharing">View Demo</a>
 
 
 <!-- LICENSE -->
