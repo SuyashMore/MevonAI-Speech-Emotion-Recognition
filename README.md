@@ -47,7 +47,7 @@ The main aim of the project is to Identify the emotion of multiple speakers in a
 
 ### Built With
 
-* [Python 2.7](https://www.python.org/download/releases/2.7/) (Python3 dosen't support one of the project Dependency)
+* [Python 3.6.9](https://www.python.org/downloads/release/python-369/) 
 * [Flask](https://flask.palletsprojects.com/en/1.1.x/)
 * [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
 * [Tensorflow-Keras](https://www.tensorflow.org/guide/keras/functional)
@@ -105,7 +105,17 @@ opt = keras.optimizers.Adam(lr=0.001, beta_1=0.9, beta_2=0.999, epsilon=None, de
 
 [Download RAVDESS Emotional speech audio dataset ](https://www.kaggle.com/uwrfkaggler/ravdess-emotional-speech-audio)
 
-* 2DConvolution(.ipynb) file is used to training the model.
+* Install requirements using: pip3 install -r src/requirements.txt
+
+* Add audio files in .wav format for analysis in input/ folder
+
+* Run Speech Emotion Recognition using: python3 src/speechEmotionRecognition.py
+
+* Diarized files will be sored in output/ folder
+
+* Predicted Emotions will be stored in a separate .csv file in src/ folder
+
+* 2DConvolution(.ipynb) file is used to training the model
 
 * Server(.py) will start the web server on Default Port
 
@@ -125,7 +135,10 @@ Distributed under the MIT License. See `LICENSE` for more information.
 * [uis-rnn and speaker embedding by vgg-speaker-recognition by taylorlu](https://github.com/taylorlu/Speaker-Diarization)
 
 
+## FAQ
 
+- **How do I do *specifically* so and so?**
+    - Create an Issue to this repo , we will respond to the query
 
 
 <!-- MARKDOWN LINKS & IMAGES -->
