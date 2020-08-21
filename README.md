@@ -18,7 +18,7 @@
     <img src="https://i.imgur.com/f1TqviT.jpeg" alt="Logo">
   </a>
 
-  <h3 align="center">Audio Emotion Analysis</h3>
+  <h3 align="center">MevonAI - Speech Emotion Recognition</h3>
 
   <p align="center">
     Identify the emotion of multiple speakers in a Audio Segment 
@@ -45,16 +45,18 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+<img src="https://i.imgur.com/xaY8Izs.png" alt="Logo">
 
 The main aim of the project is to Identify the emotion of multiple speakers in a call audio as a application for customer satisfaction feedback in call centres.
 
 Here's how:
-* Using Convolutional Neural Network to recognize emotion from the audio recording
 
+## Feature Extraction
+* When we do Speech Recognition tasks, MFCCs is the state-of-the-art feature since it was invented in the 1980s.This shape determines what sound comes out. If we can determine the shape accurately, this should give us an accurate representation of the phoneme being produced. The shape of the vocal tract manifests itself in the envelope of the short time power spectrum, and the job of MFCCs is to accurately represent this envelope. 
 
-* When we do Speech Recognition tasks, MFCCs is the state-of-the-art feature since it was invented in the 1980s.
 <img src="https://i.imgur.com/UANHXoU.png" alt="Logo">
+
+* Using Convolutional Neural Network to recognize emotion from the audio recording
 
 Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue.
 
