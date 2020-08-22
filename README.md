@@ -113,29 +113,30 @@ The Above Image represents the audio Waveform , the below image shows the conver
 #### CNN Model
 * Use Convolutional Neural Network to recognize emotion on the MFCCs with the following Architecture
 ```python
-model_ravdess = Sequential()
-kernel = 5
-model_ravdess.add(Conv2D(32, 5,strides=2,padding='same',
+model = Sequential()
+
+#Input Layer
+model.add(Conv2D(32, 5,strides=2,padding='same',
                  input_shape=(13,216,1)))
-model_ravdess.add(Activation('relu'))
-model_ravdess.add(BatchNormalization())
+model.add(Activation('relu'))
+model.add(BatchNormalization())
 
+#Hidden Layer 1
+model.add(Conv2D(64, 5,strides=2,padding='same',))
+model.add(Activation('relu'))
+model.add(BatchNormalization())
 
-model_ravdess.add(Conv2D(64, 5,strides=2,padding='same',))
-model_ravdess.add(Activation('relu'))
-model_ravdess.add(BatchNormalization())
+#Hidden Layer 2
+model.add(Conv2D(64, 5,strides=2,padding='same',))
+model.add(Activation('relu'))
+model.add(BatchNormalization())
 
-model_ravdess.add(Conv2D(64, 5,strides=2,padding='same',))
-model_ravdess.add(Activation('relu'))
-model_ravdess.add(BatchNormalization())
+#Flatten Conv Net
+model.add(Flatten())
 
-model_ravdess.add(Flatten())
-
-
-model_ravdess.add(Dense(7))
-model_ravdess.add(Activation('softmax'))
-
-opt = keras.optimizers.Adam(lr=0.001, beta_1=0.9, beta_2=0.999, epsilon=None, decay=0.0, amsgrad=False)
+#Output Layer
+model.add(Dense(7))
+model.add(Activation('softmax'))
 ```
 
 
