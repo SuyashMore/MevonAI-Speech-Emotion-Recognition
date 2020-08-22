@@ -66,7 +66,7 @@ if __name__ == '__main__':
     for subdir in os.listdir(folder):
         predictions,filenames = predict(f'{folder}{"/"}{subdir}', classes, model)
         # print("filename:",filenames,",Predictions:",predictions)
-        with open('SER_'+subdir+'.csv', 'w') as csvFile:
+        with open('output/emotions/SER_'+subdir+'.csv', 'w') as csvFile:
             writer = csv.writer(csvFile)
             for i in range(len(filenames)):
                 csvData = [filenames[i], 'person01',predictions[i][0],'person02',predictions[i][1]]
