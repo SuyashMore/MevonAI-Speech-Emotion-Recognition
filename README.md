@@ -57,8 +57,6 @@ The main aim of the project is to Identify the emotion of multiple speakers in a
 ### Built With
 
 * [Python 3.6.9](https://www.python.org/downloads/release/python-369/) 
-* [Flask](https://flask.palletsprojects.com/en/1.1.x/)
-* [MongoDB Atlas](https://www.mongodb.com/cloud/atlas)
 * [Tensorflow-Keras](https://www.tensorflow.org/guide/keras/functional)
 * [librosa](https://github.com/librosa/librosa)
 
