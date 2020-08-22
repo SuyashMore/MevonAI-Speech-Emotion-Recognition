@@ -32,17 +32,17 @@ def diarizeFromFolder(fromFolder,toFolder):
         computeTime = end-start
         computeSpeed = audioSeconds/computeTime
         print("Processing File Complete:",ifile)
-        print("Time Required for Computation:",(end-start)/60," minutes")
-        print("Computation Speed:",computeSpeed," s/s")
+        # print("Time Required for Computation:",(end-start)/60," minutes")
+        # print("Computation Speed:",computeSpeed," s/s")
 
         Total_time += computeTime
         total_audio_seconds += audioSeconds
         
         collected = gc.collect()
         # print("Garbage Collector: Collected ",collected," objects")
-    print("Total Time Required for Process:",Total_time/60," minutes")
-    print("Total Audio-Time in the Process:",total_audio_seconds/60," minutes")
-    print("Average Compute Time:",total_audio_seconds/Total_time," s/s")
+    # print("Total Time Required for Process:",Total_time/60," minutes")
+    # print("Total Audio-Time in the Process:",total_audio_seconds/60," minutes")
+    # print("Average Compute Time:",total_audio_seconds/Total_time," s/s")
 
 
 

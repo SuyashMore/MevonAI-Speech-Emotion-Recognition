@@ -1,12 +1,3 @@
-
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
 [![PR](https://camo.githubusercontent.com/f96261621753dacf526590825b84f87ccb1db0e6/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f5052732d77656c636f6d652d627269676874677265656e2e7376673f7374796c653d666c6174)](pullreq-url)
 [![MIT License][license-shield]][license-url]
 
@@ -24,7 +15,7 @@
     Identify the emotion of multiple speakers in a Audio Segment 
     <br />
     <br />
-    <a href="https://colab.research.google.com/drive/1RG8Ms2M7GKro2GPJluy3UwpuOj4WCXgf?usp=sharing">View Demo</a>
+    <a href="https://colab.research.google.com/drive/1RG8Ms2M7GKro2GPJluy3UwpuOj4WCXgf?usp=sharing">Try the Demo</a>
     ·
     <a href="https://github.com/SuyashMore/MevonAI-Speech-Emotion-Recognition/issues">Report Bug</a>
     ·
