@@ -88,7 +88,7 @@ python3 src/speechEmotionRecognition.py
 ```
 3. By Default , the application will use the Pretrained Model Available in "src/model/"
 
-4. Diarized files will be sored in "src/output/" folder
+4. Diarized files will be stored in "src/output/" folder
 
 5. Predicted Emotions will be stored in a separate .csv file in src/ folder
 
