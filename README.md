@@ -70,7 +70,7 @@ Follow the Below Instructions for setting the project up on your local Machine.
 
 1. Clone the repo
 ```sh
-git clone https://github.com/your_username_/Project-Name.git
+git clone https://github.com/SuyashMore/MevonAI-Speech-Emotion-Recognition.git
 ```
 2. Install Dependencies
 ```sh
