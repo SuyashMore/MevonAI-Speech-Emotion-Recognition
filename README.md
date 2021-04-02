@@ -69,6 +69,7 @@ Follow the Below Instructions for setting the project up on your local Machine.
 ### Installation
 1. Create a python virtual environment
 ```sh
+sudo apt install python3-venv
 mkdir mevonAI
 cd mevonAI
 python3 -m venv mevon-env
