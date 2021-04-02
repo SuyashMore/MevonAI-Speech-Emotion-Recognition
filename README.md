@@ -74,7 +74,9 @@ git clone https://github.com/SuyashMore/MevonAI-Speech-Emotion-Recognition.git
 ```
 2. Install Dependencies
 ```sh
-sudo chmod +x src/setup.sh
+cd MevonAI-Speech-Emotion-Recognition/
+cd src/
+sudo chmod +x setup.sh
 ./setup.sh
 ```
 
@@ -84,7 +86,7 @@ sudo chmod +x src/setup.sh
 
 2. Run Speech Emotion Recognition using 
 ```sh
-python3 src/speechEmotionRecognition.py
+python3 speechEmotionRecognition.py
 ```
 3. By Default , the application will use the Pretrained Model Available in "src/model/"
 
