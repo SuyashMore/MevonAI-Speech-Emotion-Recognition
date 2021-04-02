@@ -17,6 +17,8 @@ from keras.callbacks import ModelCheckpoint
 import sys
 import librosa
 import bulkDiarize as bk
+import os
+os.environ['TF_CPP_MIN_LOG_LEVEL'] = '3' 
 model = keras.models.load_model('model/lstm_cnn_rectangular_lowdropout_trainedoncustomdata.h5')
 
 classes = ['Neutral', 'Happy', 'Sad',
