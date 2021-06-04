@@ -2,6 +2,7 @@ pip3 install --upgrade pip
 python3 -m pip install --upgrade setuptools
 sudo apt install libasound2-dev portaudio19-dev libportaudio2 libportaudiocpp0 ffmpeg
 sudo apt install python3-venv
+pip3 uninstall -y keras-nightly
 pip3 install librosa
 pip3 install matplotlib
 pip3 install h5py==2.10.0
