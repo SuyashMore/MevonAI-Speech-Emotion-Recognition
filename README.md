@@ -65,8 +65,27 @@ The main aim of the project is to Identify the emotion of multiple speakers in a
 ## Getting Started
 Follow the Below Instructions for setting the project up on your local Machine.
 
+## Method 1
+#### Recommended
+
+1. Install docker
+2. Pull the docker image
+```sh
+sudo docker pull chinmaynehate/mevon-ai-ser:2.0
+```
+3. Run the docker image
+```sh
+sudo docker run -it chinmaynehate/mevon-ai-ser:2.0 bash
+```
+3. Run Speech Emotion Recognition using 
+```sh
+python3 speechEmotionRecognition.py
+```
+
+## Method 2
 
 ### Installation
+
 1. Create a python virtual environment
 ```sh
 sudo apt install python3-venv
